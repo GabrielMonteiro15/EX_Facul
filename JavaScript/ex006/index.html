@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX06</title>
+</head>
+<body>
+        <h2>Média escolar</h2>
+        <p>
+            <label for="in1">Informe a primeira nota</label>
+            <input type="number" name="n1" id="in1"> <br>
+            <label for="in2">Informe a segunda nota</label>
+            <input type="number" name="n2" id="in2"> <br>
+            <label for="in3">Informe a terceira nota</label>
+            <input type="number" name="n3" id="in3"> <br>
+            <label for="in4">Informe a quarta nota</label>
+            <input type="number" name="n4" id="in4">
+            <br>
+            <input type="button" value="Calcular" onclick="Calc()">
+        </p>
+
+        <p id="res"></p>
+        <script>
+            function Calc(){    
+                var n1 = document.getElementById("in1").value
+                var n2 = document.getElementById("in2").value
+                var n3 = document.getElementById("in3").value
+                var n4 = document.getElementById("in4").value
+                var res = document.getElementById("res")
+                var media = ((n1 + n2 + n3 + n4) / 4)
+                if(media >=5 ){
+                    res.innerHTML = `Aluno aprovado com média de ${media}`
+
+                }
+                else {
+                    res.innerHTML = `Aluno reprovado com média de ${media}`
+                }
+
+
+            }
+        </script>
+</body>
+</html>

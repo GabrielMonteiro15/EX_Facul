@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX04</title>
+</head>
+<body>
+        <p>
+            <label for="inum">Digite um valor:</label>
+            <input type="number" name="num" id="inum">
+            <input type="button" value="Enviar" onclick=" Verficar()">
+        </p>
+        <p id="res"></p>
+        <script>
+                function Verficar(){
+                    const num = document.getElementById("inum").value
+                    const res = document.getElementById("res")
+                    var a;
+                    var b;
+                    if(num >= 0){
+                        a = num
+                        b = 0
+                        res.innerHTML = `Valor da variavel A: ${a} e valor da variavel B: ${b}`
+                    }
+                    else if(num <= 0 ){
+                        a = 0
+                        b = num
+                        res.innerHTML = `Valor da variavel A: ${a} e valor da variavel B: ${b}`
+                    }
+                }
+        </script>
+</body>
+</html>

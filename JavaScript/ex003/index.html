@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX03</title>
+</head>
+<body>
+        <p>
+            <label for="itext">Informe o nome:</label>
+            <input type="text" name="text" id="itext"> <br>
+            <label for="isexo">Informe o sexo</label>
+            <input type="radio" name="sexo" id="imasc" checked><label for="imasc"></label>Masculino</label>
+            <input type="radio" name="Feminino" id="ifem"><label for="ifem"></label>Feminino</label>
+            <input type="button" value="Enviar" onclick="Ola()">
+        </p>
+        <p id="res"></p>
+        <script>
+            function Ola(){
+                var nome = document.getElementById("itext").value
+                var sexo = document.getElementsByName("sexo").value
+                var res = document.getElementById("res")
+               if(sexo[0].checked){
+                 res.innerHTML = `Olá Sr ${nome}`
+               }
+               else if(sexo[1].checked){
+                    res.innerHTML `Olá Sra ${nome}`
+               }
+                
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX05</title>
+</head>
+<body>
+        <p>
+            <label for="ialtu">Informe a altura</label>
+            <input type="number" name="altu" id="ialtu"> <br>
+            <label for="imasc">Informe o sexo</label>
+            <input type="checkbox" name="masc" id="imasc" checked> Masculino
+            <input type="checkbox" name="fem" id="ifem"> Feminino
+            <input type="button" value="Enviar" onclick="Calc()">
+            <p id="res"></p>
+        </p>
+        <script>
+            function Calc(){    
+                const altura = document.getElementById("ialtu").value
+                const masc = document.getElementById("imasc")
+                const fem = document.getElementById("ifem")
+                const res = document.getElementById("res")
+                var peso ;
+                if(masc.checked){
+                    peso = (72.7 * altura) - 58
+                    res.innerHTML = `Para homen com ${altura}M o peso ideal é ${peso.toFixed(2)}`
+                }
+                if (fem.checked){
+                    peso = (62.1*altura) - 44.7
+                    res.innerHTML = `Para uma mulher com  ${altura}M o peso ideal é ${peso.toFixed(2)}`
+                }
+            }
+        </script>
+</body>
+</html>
